@@ -62,6 +62,7 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                <version>${boot.version}</version>
             </plugin>
             <!-- 解决编译target bytecode version自动变为1.5导致无法重启 -->
             <plugin>
