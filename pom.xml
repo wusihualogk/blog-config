@@ -63,6 +63,14 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <version>${boot.version}</version>
+                <!-- 当parent不是spring-boot-starter-parent时，打包出来的jar无主属性清单，需要加上如下配置 -->
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>repackage</goal>
+                        </goals>
+                    </execution>
+                </executions>
             </plugin>
             <!-- 解决编译target bytecode version自动变为1.5导致无法重启 -->
             <plugin>
